@@ -1,4 +1,6 @@
 require_relative 'question'
+require_relative 'response'
+
 
 module Surveyor
   class Survey
