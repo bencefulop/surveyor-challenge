@@ -4,7 +4,12 @@ module Surveyor
     # TODO: Remove these comments ;)
     attr_reader :name
 
-    def initialize(name)
+    def initialize(attributes = {})
+      @name = attributes[:name]
     end
+
+
+
+
   end
 end
