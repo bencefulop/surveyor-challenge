@@ -1,3 +1,5 @@
+require_relative 'question'
+
 module Surveyor
   class Survey
     attr_reader :name
