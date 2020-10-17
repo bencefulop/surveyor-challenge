@@ -1,5 +1,9 @@
 module Surveyor
   class Question
-    # your code goes here
+    attr_accessor :title
+
+    def initialize(attributes = {})
+      @title = attributes[:title]
+    end
   end
 end

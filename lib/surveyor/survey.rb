@@ -12,7 +12,7 @@ module Surveyor
     def add_question(question)
       @questions << question
     end
-    
+
     def add_response(response)
       @responses << response
     end
