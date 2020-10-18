@@ -6,4 +6,18 @@ RSpec.describe Surveyor::Response do
   it "has an email address" do
     expect(subject.email).to eq("john_doe@gmail.com")
   end
+
+  context 'valid_email?' do
+    it 'is valid when email address is in correct format' do
+      expect(subject.valid_email?('john_doe@gmail.com')).to eq(true)
+    end
+
+    it 'is invalid when email is incorrect' do
+      expect(subject.valid_email?('john_doe.gmail.com')).to eq(false)
+    end
+
+    it 'is invalid when email is not String' do
+      expect(subject.valid_email?(1)).to eq(false)
+    end
+  end
 end
