@@ -19,7 +19,7 @@ module Surveyor
     def add_response(response)
       @responses << response
     end
-    
+
     def find_response_by_email(email)
       result = @responses.select { |response| response.email == email }
       result.empty? ? nil : result
