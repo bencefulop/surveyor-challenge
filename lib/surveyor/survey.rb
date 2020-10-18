@@ -1,7 +1,6 @@
 require_relative 'question'
 require_relative 'response'
 
-
 module Surveyor
   class Survey
     attr_reader :name
