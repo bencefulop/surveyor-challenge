@@ -1,4 +1,6 @@
 require_relative 'question'
+require_relative 'free_text_question'
+require_relative 'rating_question'
 require_relative 'response'
 
 module Surveyor
@@ -35,7 +37,7 @@ survey = Surveyor::Survey.new(name: "Engagement Survey")
 response = Surveyor::Response.new(email: "john_doe@gmail.com")
 survey.add_response(response)
 
-question = Surveyor::Question.new(title: "How happy are you?")
+question = Surveyor::RatingQuestion.new(title: "How happy are you?")
 survey.add_question(question)
 
 answer = Surveyor::Answer.new(question, 5)
