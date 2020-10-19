@@ -2,9 +2,7 @@
 
 The following is a completed version of the coding challenge. For reference, the content of the original readme is [below.](https://github.com/bencefulop/surveyor-challenge#Start-of-original-challenge-description)
 
-The exercise uses Ruby 2.5. If your version is different you'll either need to upgrade/downgrade or use a Ruby versioning tool, such as RVM to run Ruby 2.5.
-
-This article is helpful if you'd like to install RVM: [link](https://medium.com/the-andela-way/ruby-versioning-with-ruby-version-manager-rvm-6a3198b263df)
+The exercise uses Ruby 2.5. If your version is different you'll either need to upgrade/downgrade or use a Ruby versioning tool, such as RVM to run Ruby 2.5. [This article](https://medium.com/the-andela-way/ruby-versioning-with-ruby-version-manager-rvm-6a3198b263df) is helpful if you'd like to install RVM.
 
 In order to install RVM's public key, you'll need gpg. If you're using Mac OSX, you'll need to install gpg separately via Homebrew before you can install RVM. To intall RVM via Homebrew run:
 
