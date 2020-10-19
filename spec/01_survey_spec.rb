@@ -40,6 +40,10 @@ RSpec.describe Surveyor::Survey do
     expect(subject.name).to eq("Engagement Survey")
   end
 
+  it "should be able to read an survey's responses" do
+    expect(subject).to respond_to :responses
+  end
+
   it "can have questions added" do
     question = double(:question)
     subject.add_question(question)
