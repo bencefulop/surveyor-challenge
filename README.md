@@ -1,5 +1,17 @@
 # Surveyor - Culture Amp Junior Engineering Coding Test
 
+The following is a completed version of the coding challenge. For reference, the content of the original readme is [below.](https://github.com/bencefulop/surveyor-challenge#Start-of-original-challenge-description)
+
+The exercise uses Ruby 2.5. If your version is different you'll either need to upgrade/downgrade or use a Ruby versioning tool, such as RVM to run Ruby 2.5.
+
+This article is helpful if you'd like to install RVM: [link](https://medium.com/the-andela-way/ruby-versioning-with-ruby-version-manager-rvm-6a3198b263df)
+
+In order to install RVM's public key, you'll need gpg. If you're using Mac OSX, you'll need to install gpg separately via Homebrew before you can install RVM. To intall RVM via Homebrew run: `brew install gnupg`.
+
+---
+
+## Start of original challenge description
+
 Hi! Thanks for applying for the Junior Engineering Program at Culture Amp.
 
 What you'll find in this little directory is some code that was generated using the `bundle gem` command from the Bundler gem. This code is the code for an (imaginary) gem called "surveyor", which helps represent survey data within Ruby.
@@ -66,7 +78,7 @@ Add a method to each of `FreeTextQuestion` and `RatingQuestion` classes that det
 
 And now we get to a harder part of the coding test where there are no pre-written tests to guide you. It is up to you now to write tests and the code that goes along with them in order to continue.
 
-*From this point on, it is assumed that you will be writing tests and code for each part as you go.*
+_From this point on, it is assumed that you will be writing tests and code for each part as you go._
 
 Your task is to now add responses to this application. Responses are included on a survey as a way of tracking a particular person's response to a survey. A response will include a particular person's answers to the survey's questions. To represent that data, you should add a `Response` class which will be used to represent a survey's responses.
 
@@ -94,9 +106,9 @@ Add another method that returns `true` or `false` depending on if the user has r
 
 Surveys should be able to tell us how many "low", "neutral" and "high" answers there are for a particular rating question. The different ratings are:
 
-* Low: 1 or 2
-* Neutral: 3
-* High: 4 or 5
+- Low: 1 or 2
+- Neutral: 3
+- High: 4 or 5
 
 Add a method that counts the low answers on a survey for a given question. Once you've got that working, do the same for both the neutral and high answers too.
 
@@ -118,9 +130,9 @@ In this example, there would be 10 answers for the rating question that had the 
 
 You will be assessed on the code you write here. What we're looking for in particular is:
 
-* Strong adherence to the [ruby-style-guide](https://github.com/bbatsov/ruby-style-guide)
-* Clean & simple Ruby code in `lib`
-* Tests in the `spec` directory to cover what your gem does
+- Strong adherence to the [ruby-style-guide](https://github.com/bbatsov/ruby-style-guide)
+- Clean & simple Ruby code in `lib`
+- Tests in the `spec` directory to cover what your gem does
 
 It is possible to complete this coding challenge without adding any additional gems. You should aim to do as much as possible without adding additional gems to the `surveyor.gemspec` or `Gemfile` files.
 
@@ -131,4 +143,3 @@ You can run `bundle exec rubocop` to check to see if your code complies with the
 If you think you've finished with the coding test, then please do submit it back to us by following the instructions in the email. We'll evalulate it and get back to you.
 
 Good luck!
-

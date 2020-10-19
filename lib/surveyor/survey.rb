@@ -43,6 +43,7 @@ module Surveyor
 
     def show_question_ratings_breakdown(question)
       ratings = get_question_ratings(question)
+      # str variable declared here to method and test output match exactly and pass rubocop
       str = "1: #{ratings.count(1)}\n
              2: #{ratings.count(2)}\n
              3: #{ratings.count(3)}\n
@@ -57,13 +58,13 @@ module Surveyor
       ratings = []
       # select all answers from survey
       answers = @responses.map(&:answers)
-      # filter answers that correspond to question
+      # get answers that correspond to question
       results = answers.map do |answer|
         answer.select do |answer_element|
           answer_element.question.title == question.title
         end
       end
-      # get answer values
+      # push answer values to rating array and then return it
       results.map { |result| result.each { |result_element| ratings << result_element.value } }
       ratings
     end

@@ -5,6 +5,7 @@ module Surveyor
 
     def initialize(attributes = {})
       @email = attributes[:email]
+      # Answers are added to responses instead of Surveys
       @answers = []
     end
 

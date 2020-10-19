@@ -8,6 +8,7 @@ module Surveyor
     end
 
     def valid_question?(question)
+      # method to throw an error if argument isn't a Question class
       question_error = StandardError.new "Must specify the question you're answering"
       question.class.superclass == Surveyor::Question ? question : question_error
     end
@@ -15,6 +16,7 @@ module Surveyor
     private
 
     def assign_class_of_value(value)
+      # value is stored either as a string or integer depending on the Question's class
       @question.class == Surveyor::RatingQuestion ? value[0].to_i : value[0].to_s
     end
   end
