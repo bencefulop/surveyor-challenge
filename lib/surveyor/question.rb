@@ -1,5 +1,3 @@
-require_relative 'answer'
-
 module Surveyor
   class Question
     attr_accessor :title

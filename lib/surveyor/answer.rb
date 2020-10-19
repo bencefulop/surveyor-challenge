@@ -1,5 +1,3 @@
-require_relative 'response'
-
 module Surveyor
   class Answer
     attr_reader :question, :value

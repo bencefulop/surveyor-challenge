@@ -1,9 +1,3 @@
-require_relative 'question'
-require_relative 'free_text_question'
-require_relative 'rating_question'
-require_relative 'response'
-require 'pry'
-
 module Surveyor
   class Survey
     attr_reader :name
