@@ -43,13 +43,12 @@ module Surveyor
 
     def show_question_ratings_breakdown(question)
       ratings = get_question_ratings(question)
-      [
-        "1: #{ratings.count(1)}",
-        "2: #{ratings.count(2)}",
-        "3: #{ratings.count(3)}",
-        "4: #{ratings.count(4)}",
-        "5: #{ratings.count(5)}",
-      ]
+      str = "1: #{ratings.count(1)}\n
+             2: #{ratings.count(2)}\n
+             3: #{ratings.count(3)}\n
+             4: #{ratings.count(4)}\n
+             5: #{ratings.count(5)}"
+      str
     end
 
     private
