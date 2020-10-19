@@ -33,28 +33,46 @@ module Surveyor
     end
 
     def show_question_ratings_classes(question)
-      
-      
-      
-      # array to hold the results
-      number_arr = []
-      # iterate through responses and select the ones for this question
-      #select all answers from suervey
-      answers = survey.responses.map {|response| response.answers}
-      # filter answers that correspond to question
-      results = answers.map do |answer| 
-        answer.select do |element| 
-          element.question.title == question.title
+      ratings = get_question_ratings(question)
+      neutral, low, high = [], [], []
+      ratings.select do |rating|
+        if rating >= 4
+          high << rating
+        elsif rating == 3
+          neutral << rating
+        else
+          low << rating
         end
       end
-        # get answer values
-        results.map { |result| result.each { |element| number_arr << element.value }}
-      #look at all question values and put them to low/neutral/high classes
-
-      # return count for all 3 classes
+      puts  "Low: #{low.size}"
+      puts "Neutral: #{neutral.size}"
+      puts "High: #{high.size}"
     end
 
     def show_question_ratings_breakdown(question)
+      ratings = get_question_ratings(question)
+      puts "1: #{ratings.count(1)}"
+      puts "2: #{ratings.count(2)}"
+      puts "3: #{ratings.count(3)}"
+      puts "4: #{ratings.count(4)}"
+      puts "5: #{ratings.count(5)}"
+    end
+
+    private
+    
+    def get_question_ratings(question)
+      ratings = []
+      #select all answers from suervey
+      answers = @responses.map {|response| response.answers}
+      # filter answers that correspond to question
+      results = answers.map do |answer| 
+        answer.select do |answer_element| 
+          answer_element.question.title == question.title
+        end
+      end
+      # get answer values
+      results.map { |result| result.each { |result_element| ratings << result_element.value }}
+      ratings
     end
   end
 end
@@ -96,15 +114,5 @@ response2.add_answer(answer_8)
 # puts "-------------"
 
 # binding.pry
-number_arr = []
-
-#select all answers from suervey
-answers = survey.responses.map {|response| response.answers}
-# filter answers that correspond to question
-results = answers.map do |answer| 
-  answer.select do |element| 
-    element.question.title == question.title
-  end
-end
-# get answer values
-results.map { |result| result.each { |element| number_arr << element.value }}
+survey.show_question_ratings_classes(question)
+survey.show_question_ratings_breakdown(question)
