@@ -24,5 +24,16 @@ module Surveyor
       result = @responses.select { |response| response.email == email }
       result.empty? ? nil : result
     end
+
+    def user_responded?(email)
+      find_response_by_email(email) != nil
+    end
   end
 end
+
+survey = Surveyor::Survey.new(name: "Engagement Survey")
+response = Surveyor::Response.new(email: "john_doe@gmail.com")
+
+survey.add_response(response)
+p survey.user_responded?("john_doe@gmail.com")
+p survey.user_responded?("johndoe@gmail.com")

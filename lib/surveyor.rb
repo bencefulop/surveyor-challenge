@@ -6,6 +6,5 @@ require "surveyor/answer"
 require "surveyor/response"
 require "surveyor/version"
 
-
 module Surveyor
 end

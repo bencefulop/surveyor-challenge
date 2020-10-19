@@ -2,7 +2,7 @@ require_relative 'response'
 
 module Surveyor
   class Answer
-    attr_accessor :question, :value
+    attr_reader :question, :value
 
     def initialize(question, *value)
       @question = valid_question?(question)
