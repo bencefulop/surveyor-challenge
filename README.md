@@ -6,7 +6,11 @@ The exercise uses Ruby 2.5. If your version is different you'll either need to u
 
 This article is helpful if you'd like to install RVM: [link](https://medium.com/the-andela-way/ruby-versioning-with-ruby-version-manager-rvm-6a3198b263df)
 
-In order to install RVM's public key, you'll need gpg. If you're using Mac OSX, you'll need to install gpg separately via Homebrew before you can install RVM. To intall RVM via Homebrew run: `brew install gnupg`.
+In order to install RVM's public key, you'll need gpg. If you're using Mac OSX, you'll need to install gpg separately via Homebrew before you can install RVM. To intall RVM via Homebrew run:
+
+```
+brew install gnupg
+```
 
 ---
 
