@@ -33,7 +33,11 @@ end
 
 survey = Surveyor::Survey.new(name: "Engagement Survey")
 response = Surveyor::Response.new(email: "john_doe@gmail.com")
-
 survey.add_response(response)
-p survey.user_responded?("john_doe@gmail.com")
-p survey.user_responded?("johndoe@gmail.com")
+
+question = Surveyor::Question.new(title: "How happy are you?")
+survey.add_question(question)
+
+answer = Surveyor::Answer.new(question, 5)
+
+p answer.question
