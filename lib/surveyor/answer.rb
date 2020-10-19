@@ -6,8 +6,7 @@ module Surveyor
 
     def initialize(question, *value)
       @question = valid_question?(question)
-      @value = value
-      # @value = set_valu0e_class(value)
+      @value = set_class_of_value(value)
     end
 
     def valid_question?(question)
@@ -17,11 +16,8 @@ module Surveyor
 
     private 
 
-    # def set_value_class(value)
-    #   if @question.class == Surveyor::RatingQuestion
-
-    #   else
-    #   end
-    # end
+    def set_class_of_value(value)
+      @question.class == Surveyor::RatingQuestion ? value[0].to_i : value[0].to_s
+    end
   end
 end
