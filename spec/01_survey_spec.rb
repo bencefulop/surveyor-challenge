@@ -58,7 +58,7 @@ RSpec.describe Surveyor::Survey do
 
   context "Search for a response" do
     it "returns response object if email is found" do
-      expect(subject.find_response_by_email("john_doe@gmail.com")).to eq([response_1])
+      expect(subject.find_response_by_email("john_doe@gmail.com")).to eq(response_1)
     end
 
     it "returns nil if email isn't found" do
@@ -90,12 +90,14 @@ RSpec.describe Surveyor::Survey do
     end
 
     it "returns breakdown of Answers" do
-      str = "1: 0\n
-             2: 2\n
-             3: 1\n
-             4: 2\n
-             5: 1"
-      expect(subject.show_question_ratings_breakdown(question_1)).to eq(str)
+      str = <<~HEREDOC
+        1: 0
+        2: 2
+        3: 1
+        4: 2
+        5: 1
+      HEREDOC
+      expect(subject.show_question_ratings_breakdown(question_1)).to eq(str.strip)
     end
   end
 end

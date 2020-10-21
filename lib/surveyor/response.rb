@@ -3,8 +3,8 @@ module Surveyor
     attr_reader :email
     attr_accessor :answers
 
-    def initialize(attributes = {})
-      @email = attributes[:email]
+    def initialize(email:)
+      @email = email
       # Answers are added to responses instead of Surveys
       @answers = []
     end

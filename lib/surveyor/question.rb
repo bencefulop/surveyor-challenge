@@ -2,8 +2,8 @@ module Surveyor
   class Question
     attr_accessor :title
 
-    def initialize(attributes = {})
-      @title = attributes[:title]
+    def initialize(title:)
+      @title = title
     end
   end
 end
