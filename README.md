@@ -4,7 +4,7 @@ The following is a completed version of the coding challenge. For reference, the
 
 The exercise uses Ruby 2.5. If your version is different you will either need to upgrade/downgrade or use a Ruby versioning tool, such as RVM to run Ruby 2.5. [This article](https://medium.com/the-andela-way/ruby-versioning-with-ruby-version-manager-rvm-6a3198b263df) is helpful if you would like to install RVM.
 
-In order to install RVM's public key, you will need gpg. If you are using Mac OSX, you will need to install gpg separately via Homebrew before you can install RVM. To intall RVM via Homebrew run:
+In order to install RVM's public key, you will need gpg. If you are using Mac OSX, you will need to install gpg separately via Homebrew before you can install RVM. To install gpg via Homebrew run:
 
 ```
 brew install gnupg
